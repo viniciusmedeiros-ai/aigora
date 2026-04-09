@@ -1,71 +1,36 @@
 ---
-// TODO: Após criar o formulário no MailerLite, substitua o valor abaixo pelo
-// seu Account ID real. Encontre em: MailerLite → Forms → seu formulário → Embed.
-const MAILERLITE_ACCOUNT = 'SEU_ACCOUNT_ID_AQUI';
+// Formulário oficial MailerLite embed — sem API key exposta
+// ID: 9FTj2w — configurado em MailerLite → Forms → Embedded forms
 ---
 
-<div class="w-full">
-  <!-- Formulário HTML puro — integra com MailerLite via fetch -->
-  <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 w-full max-w-md mx-auto">
-    <input
-      type="email"
-      name="email"
-      required
-      placeholder="seu@email.com"
-      class="flex-1 rounded-lg border border-slate-600 bg-slate-800 px-4 py-3 text-sm text-slate-100 placeholder-slate-500 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors"
-    />
-    <button
-      type="submit"
-      class="rounded-lg bg-brand-gradient px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/20 hover:opacity-90 transition-opacity whitespace-nowrap"
-    >
-      Quero receber
-    </button>
-  </form>
-
-  <p id="form-message" class="mt-3 text-center text-sm hidden"></p>
-
+<div class="w-full ml-form-wrapper">
+  <div class="ml-embedded" data-form="9FTj2w"></div>
   <p class="mt-3 text-center text-xs text-slate-500">
     Quinzenal · sem spam · cancele quando quiser
   </p>
 </div>
 
-<script define:vars={{ MAILERLITE_ACCOUNT }}>
-  const form = document.getElementById('newsletter-form');
-  const msg = document.getElementById('form-message');
-
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const email = form.querySelector('input[name="email"]').value;
-    const btn = form.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    btn.textContent = 'Enviando...';
-
-    try {
-      // Integração via MailerLite API v2 (substitua o group ID abaixo)
-      // Group ID: encontre em MailerLite → Subscribers → Groups → seu grupo
-      const res = await fetch(`https://connect.mailerlite.com/api/subscribers`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${MAILERLITE_ACCOUNT}`,
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      if (res.ok) {
-        msg.textContent = 'Inscrito com sucesso! Até a próxima quinzena.';
-        msg.className = 'mt-3 text-center text-sm text-emerald-400';
-        form.reset();
-      } else {
-        throw new Error();
-      }
-    } catch {
-      msg.textContent = 'Algo deu errado. Tente novamente em instantes.';
-      msg.className = 'mt-3 text-center text-sm text-red-400';
-    } finally {
-      msg.classList.remove('hidden');
-      btn.disabled = false;
-      btn.textContent = 'Quero receber';
-    }
-  });
-</script>
+<style is:global>
+  /* Adapta o embed do MailerLite ao tema escuro */
+  .ml-form-wrapper .ml-embedded {
+    width: 100%;
+  }
+  .ml-form-wrapper .ml-subscribe-form {
+    background: transparent !important;
+    padding: 0 !important;
+  }
+  .ml-form-wrapper .ml-field-group input {
+    background: rgb(30 41 59) !important;
+    border-color: rgb(71 85 105) !important;
+    color: rgb(241 245 249) !important;
+    border-radius: 0.5rem !important;
+  }
+  .ml-form-wrapper .ml-field-group input::placeholder {
+    color: rgb(100 116 139) !important;
+  }
+  .ml-form-wrapper .ml-subscribe-button button {
+    background: linear-gradient(135deg, #6366F1 0%, #0EA5E9 100%) !important;
+    border-radius: 0.5rem !important;
+    font-weight: 600 !important;
+  }
+</style>
