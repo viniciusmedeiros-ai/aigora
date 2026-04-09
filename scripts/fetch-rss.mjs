@@ -19,8 +19,8 @@ const CONTENT_DIR = join(__dirname, '../src/content/noticias');
 
 if (!existsSync(CONTENT_DIR)) mkdirSync(CONTENT_DIR, { recursive: true });
 
-const MAX_NEW_PER_RUN = 5;
-const MAX_AGE_HOURS   = 48;
+const MAX_NEW_PER_RUN = parseInt(process.env.MAX_NEW ?? '5');
+const MAX_AGE_HOURS   = parseInt(process.env.MAX_AGE_HOURS ?? '48');
 
 const parser = new Parser({
   timeout: 12000,
@@ -35,14 +35,15 @@ const parser = new Parser({
 });
 
 const feeds = [
-  { url: 'https://www.anthropic.com/rss.xml',                                  categoria: 'claude-anthropic', fonte: 'Anthropic' },
+  // Anthropic não tem RSS público — cobrimos via Simon Willison (melhor cobertura técnica de Claude)
+  { url: 'https://simonwillison.net/atom/everything/',                          categoria: 'claude-anthropic', fonte: 'Simon Willison' },
   { url: 'https://openai.com/blog/rss.xml',                                    categoria: 'llms',             fonte: 'OpenAI' },
   { url: 'https://blog.google/technology/ai/rss/',                             categoria: 'llms',             fonte: 'Google AI' },
-  { url: 'https://www.theverge.com/ai-artificial-intelligence/rss/index.xml',  categoria: 'atualizacoes',     fonte: 'The Verge AI' },
+  { url: 'https://www.theverge.com/rss/ai-artificial-intelligence/index.xml',  categoria: 'atualizacoes',     fonte: 'The Verge AI' },
   { url: 'https://techcrunch.com/category/artificial-intelligence/feed/',      categoria: 'ferramentas',      fonte: 'TechCrunch AI' },
   { url: 'https://venturebeat.com/category/ai/feed/',                          categoria: 'marketing-ia',     fonte: 'VentureBeat AI' },
   { url: 'https://huggingface.co/blog/feed.xml',                               categoria: 'llms',             fonte: 'Hugging Face' },
-  { url: 'https://www.technologyreview.com/topic/artificial-intelligence/feed', categoria: 'atualizacoes',    fonte: 'MIT Tech Review' },
+  { url: 'https://feeds.arstechnica.com/arstechnica/technology-lab',           categoria: 'atualizacoes',     fonte: 'Ars Technica AI' },
 ];
 
 function slugify(text) {
