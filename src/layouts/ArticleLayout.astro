@@ -9,9 +9,10 @@ interface Props {
   fonte: string;
   fonteUrl: string;
   resumo: string;
+  imagem?: string;
 }
 
-const { title, date, categoria, fonte, fonteUrl, resumo } = Astro.props;
+const { title, date, categoria, fonte, fonteUrl, resumo, imagem } = Astro.props;
 
 const formattedDate = new Intl.DateTimeFormat('pt-BR', {
   weekday: 'long',
@@ -19,32 +20,99 @@ const formattedDate = new Intl.DateTimeFormat('pt-BR', {
   month: 'long',
   year: 'numeric',
 }).format(date);
+
+const placeholders: Record<string, string> = {
+  'llms':             '/placeholders/llms.svg',
+  'ferramentas':      '/placeholders/ferramentas.svg',
+  'claude-anthropic': '/placeholders/claude.svg',
+  'marketing-ia':     '/placeholders/marketing.svg',
+  'atualizacoes':     '/placeholders/atualizacoes.svg',
+  'tutoriais':        '/placeholders/tutoriais.svg',
+};
+const imgSrc = imagem || placeholders[categoria] || '/placeholders/llms.svg';
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const categoriaLabel: Record<string, string> = {
+  'llms':             'LLMs & Modelos',
+  'ferramentas':      'Ferramentas',
+  'claude-anthropic': 'Claude & Anthropic',
+  'marketing-ia':     'Marketing com IA',
+  'atualizacoes':     'Atualizações',
+  'tutoriais':        'Tutoriais & Práticas',
+};
+
+const schemaNewsArticle = {
+  '@context': 'https://schema.org',
+  '@type': 'NewsArticle',
+  headline: title,
+  description: resumo,
+  image: imgSrc.startsWith('http') ? imgSrc : new URL(imgSrc, Astro.site).toString(),
+  datePublished: date.toISOString(),
+  dateModified: date.toISOString(),
+  author: { '@type': 'Organization', name: 'AIgora', url: Astro.site?.toString() },
+  publisher: {
+    '@type': 'Organization',
+    name: 'AIgora',
+    url: Astro.site?.toString(),
+    logo: { '@type': 'ImageObject', url: new URL('/logo.svg', Astro.site).toString() },
+  },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical.toString() },
+  isPartOf: { '@type': 'WebSite', name: 'AIgora', url: Astro.site?.toString() },
+};
+
+const schemaBreadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Início',                  item: Astro.site?.toString() },
+    { '@type': 'ListItem', position: 2, name: categoriaLabel[categoria],  item: new URL(`/categoria/${categoria}`, Astro.site).toString() },
+    { '@type': 'ListItem', position: 3, name: title },
+  ],
+};
 ---
 
-<BaseLayout title={title} description={resumo}>
+<BaseLayout title={title} description={resumo} image={imgSrc}>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaNewsArticle)} slot="head-extra" />
+  <script type="application/ld+json" set:html={JSON.stringify(schemaBreadcrumb)} slot="head-extra" />
+
   <div class="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-    <!-- Breadcrumb -->
-    <nav class="flex items-center gap-2 text-xs text-slate-500 mb-8">
+    <!-- Breadcrumb visual -->
+    <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs text-slate-500 mb-8">
       <a href="/" class="hover:text-slate-300 transition-colors">Início</a>
-      <span>/</span>
-      <a href={`/categoria/${categoria}`} class="hover:text-slate-300 transition-colors capitalize">
-        {categoria.replace('-', ' ')}
+      <span aria-hidden="true">/</span>
+      <a href={`/categoria/${categoria}`} class="hover:text-slate-300 transition-colors">
+        {categoriaLabel[categoria]}
       </a>
-      <span>/</span>
+      <span aria-hidden="true">/</span>
       <span class="text-slate-400 truncate max-w-xs">{title}</span>
     </nav>
 
     <!-- Header do artigo -->
-    <header class="mb-8">
+    <header class="mb-6">
       <div class="flex items-center gap-3 mb-4">
         <CategoryBadge categoria={categoria} />
-        <time class="text-sm text-slate-500 capitalize">{formattedDate}</time>
+        <time class="text-sm text-slate-500 capitalize" datetime={date.toISOString()}>{formattedDate}</time>
       </div>
       <h1 class="text-2xl sm:text-3xl font-bold text-white leading-tight mb-4">{title}</h1>
       <p class="text-lg text-slate-400 leading-relaxed">{resumo}</p>
     </header>
 
-    <!-- Divisor com gradiente -->
+    <!-- Imagem de destaque -->
+    <div class="mb-8 rounded-xl overflow-hidden">
+      <img
+        src={imgSrc}
+        alt={title}
+        width="768"
+        height="432"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        class="w-full h-64 sm:h-80 object-cover"
+        onerror={`this.src='${placeholders[categoria] || '/placeholders/llms.svg'}'`}
+      />
+    </div>
+
+    <!-- Divisor -->
     <div class="h-px bg-gradient-to-r from-indigo-500/50 via-cyan-500/50 to-transparent mb-8"></div>
 
     <!-- Conteúdo -->
@@ -58,7 +126,7 @@ const formattedDate = new Intl.DateTimeFormat('pt-BR', {
       <slot />
     </div>
 
-    <!-- Link para fonte original -->
+    <!-- Fonte original -->
     <div class="mt-10 rounded-xl border border-slate-700 bg-slate-800/50 p-5 flex items-center justify-between gap-4">
       <div>
         <p class="text-xs text-slate-500 mb-1">Fonte original</p>
@@ -74,7 +142,6 @@ const formattedDate = new Intl.DateTimeFormat('pt-BR', {
       </a>
     </div>
 
-    <!-- Voltar -->
     <div class="mt-8">
       <a href="/" class="text-sm text-slate-500 hover:text-slate-300 transition-colors">← Voltar ao início</a>
     </div>
