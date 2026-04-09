@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="AIgora favicon">
+  <defs>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo com cantos arredondados -->
+  <rect width="64" height="64" rx="14" fill="#0F172A"/>
+
+  <!-- Círculo externo -->
+  <circle cx="32" cy="32" r="24" fill="none" stroke="url(#brand)" stroke-width="2"/>
+
+  <!-- Conexões da rede neural -->
+  <line x1="32" y1="13" x2="16" y2="43" stroke="url(#brand)" stroke-width="1.5" stroke-opacity="0.65"/>
+  <line x1="32" y1="13" x2="48" y2="43" stroke="url(#brand)" stroke-width="1.5" stroke-opacity="0.65"/>
+  <line x1="16" y1="43" x2="48" y2="43" stroke="#38BDF8"    stroke-width="1.5" stroke-opacity="0.65"/>
+
+  <!-- Nós da rede neural -->
+  <circle cx="32" cy="13" r="4" fill="#818CF8"/>
+  <circle cx="16" cy="43" r="4" fill="#6366F1"/>
+  <circle cx="48" cy="43" r="4" fill="#38BDF8"/>
+</svg>

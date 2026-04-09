@@ -1,0 +1,15 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  # A Vercel detecta o push automaticamente via integração GitHub.
+  # Este workflow existe apenas como documentação do fluxo.
+  # Nenhuma ação necessária aqui — o deploy é 100% automático via Vercel.
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy triggered
+        run: echo "Push na main detectado. Vercel iniciará o deploy automaticamente."

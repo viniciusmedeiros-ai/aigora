@@ -1,0 +1,22 @@
+# Dependências
+node_modules/
+
+# Build Astro
+dist/
+.astro/
+
+# Variáveis de ambiente — NUNCA commitar
+.env
+.env.local
+.env.production
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+.idea/
+
+# Logs
+npm-debug.log*

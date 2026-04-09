@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import NewsCard from '../../components/NewsCard.astro';
+
+const categorias = ['llms', 'ferramentas', 'claude-anthropic', 'marketing-ia', 'atualizacoes', 'tutoriais'];
+
+export async function getStaticPaths() {
+  const cats = ['llms', 'ferramentas', 'claude-anthropic', 'marketing-ia', 'atualizacoes', 'tutoriais'];
+  return cats.map((categoria) => ({ params: { categoria } }));
+}
+
+const { categoria } = Astro.params;
+
+const labelsMap: Record<string, string> = {
+  'llms':             'LLMs & Modelos',
+  'ferramentas':      'Ferramentas',
+  'claude-anthropic': 'Claude & Anthropic',
+  'marketing-ia':     'Marketing com IA',
+  'atualizacoes':     'Atualizações',
+  'tutoriais':        'Tutoriais & Práticas',
+};
+
+const label = labelsMap[categoria] ?? categoria;
+
+const todas = await getCollection('noticias', ({ data }) => data.categoria === categoria);
+const noticias = todas.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout title={label} description={`Notícias sobre ${label} em português — AIgora`}>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-12">
+    <!-- Header da categoria -->
+    <div class="mb-10">
+      <a href="/" class="text-sm text-slate-500 hover:text-slate-300 transition-colors">← Início</a>
+      <h1 class="mt-4 text-2xl sm:text-3xl font-bold text-white">{label}</h1>
+      <p class="mt-1 text-slate-500 text-sm">{noticias.length} {noticias.length === 1 ? 'notícia' : 'notícias'}</p>
+    </div>
+
+    {noticias.length > 0 ? (
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {noticias.map((noticia) => (
+          <NewsCard
+            title={noticia.data.title}
+            date={noticia.data.date}
+            categoria={noticia.data.categoria}
+            fonte={noticia.data.fonte}
+            resumo={noticia.data.resumo}
+            slug={noticia.slug}
+            destaque={noticia.data.destaque}
+          />
+        ))}
+      </div>
+    ) : (
+      <div class="rounded-xl border border-slate-700 bg-slate-800/40 p-12 text-center">
+        <p class="text-slate-400">Nenhuma notícia nesta categoria ainda.</p>
+        <p class="mt-1 text-sm text-slate-600">O próximo ciclo de atualização trará novidades.</p>
+      </div>
+    )}
+  </div>
+</BaseLayout>

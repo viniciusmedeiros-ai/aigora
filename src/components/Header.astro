@@ -1,0 +1,77 @@
+---
+const nav = [
+  { label: 'Início',     href: '/' },
+  { label: 'LLMs',       href: '/categoria/llms' },
+  { label: 'Ferramentas', href: '/categoria/ferramentas' },
+  { label: 'Claude',     href: '/categoria/claude-anthropic' },
+  { label: 'Marketing',  href: '/categoria/marketing-ia' },
+  { label: 'Atualizações', href: '/categoria/atualizacoes' },
+];
+
+const current = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-900/90 backdrop-blur-md">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2.5 shrink-0">
+      <img src="/logo.svg" alt="AIgora" class="h-8 w-auto" />
+    </a>
+
+    <!-- Nav desktop -->
+    <nav class="hidden md:flex items-center gap-1">
+      {nav.map(({ label, href }) => (
+        <a
+          href={href}
+          class={`rounded-md px-3 py-1.5 text-sm transition-colors ${
+            current === href || (href !== '/' && current.startsWith(href))
+              ? 'bg-indigo-500/15 text-indigo-300 font-medium'
+              : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'
+          }`}
+        >
+          {label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- CTA newsletter -->
+    <a
+      href="/newsletter"
+      class="hidden sm:inline-flex items-center gap-1.5 rounded-lg bg-brand-gradient px-4 py-2 text-sm font-semibold text-white shadow-md shadow-indigo-500/20 hover:opacity-90 transition-opacity"
+    >
+      Newsletter
+    </a>
+
+    <!-- Mobile menu button -->
+    <button id="menu-btn" class="md:hidden rounded-md p-2 text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-colors" aria-label="Menu">
+      <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile nav -->
+  <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-800 px-4 py-3 flex-col gap-1">
+    {nav.map(({ label, href }) => (
+      <a
+        href={href}
+        class={`block rounded-md px-3 py-2 text-sm transition-colors ${
+          current === href || (href !== '/' && current.startsWith(href))
+            ? 'bg-indigo-500/15 text-indigo-300 font-medium'
+            : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'
+        }`}
+      >
+        {label}
+      </a>
+    ))}
+    <a href="/newsletter" class="mt-2 block rounded-lg bg-brand-gradient px-3 py-2 text-sm font-semibold text-white text-center">
+      Newsletter quinzenal
+    </a>
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+</script>

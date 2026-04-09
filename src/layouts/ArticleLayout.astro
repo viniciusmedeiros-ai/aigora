@@ -1,0 +1,82 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import CategoryBadge from '../components/CategoryBadge.astro';
+
+interface Props {
+  title: string;
+  date: Date;
+  categoria: string;
+  fonte: string;
+  fonteUrl: string;
+  resumo: string;
+}
+
+const { title, date, categoria, fonte, fonteUrl, resumo } = Astro.props;
+
+const formattedDate = new Intl.DateTimeFormat('pt-BR', {
+  weekday: 'long',
+  day: '2-digit',
+  month: 'long',
+  year: 'numeric',
+}).format(date);
+---
+
+<BaseLayout title={title} description={resumo}>
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs text-slate-500 mb-8">
+      <a href="/" class="hover:text-slate-300 transition-colors">Início</a>
+      <span>/</span>
+      <a href={`/categoria/${categoria}`} class="hover:text-slate-300 transition-colors capitalize">
+        {categoria.replace('-', ' ')}
+      </a>
+      <span>/</span>
+      <span class="text-slate-400 truncate max-w-xs">{title}</span>
+    </nav>
+
+    <!-- Header do artigo -->
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <CategoryBadge categoria={categoria} />
+        <time class="text-sm text-slate-500 capitalize">{formattedDate}</time>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-bold text-white leading-tight mb-4">{title}</h1>
+      <p class="text-lg text-slate-400 leading-relaxed">{resumo}</p>
+    </header>
+
+    <!-- Divisor com gradiente -->
+    <div class="h-px bg-gradient-to-r from-indigo-500/50 via-cyan-500/50 to-transparent mb-8"></div>
+
+    <!-- Conteúdo -->
+    <div class="prose prose-invert prose-slate prose-lg max-w-none
+      prose-headings:text-white prose-headings:font-semibold
+      prose-p:text-slate-300 prose-p:leading-relaxed
+      prose-a:text-indigo-400 prose-a:no-underline hover:prose-a:text-indigo-300
+      prose-strong:text-white
+      prose-code:text-cyan-300 prose-code:bg-slate-800 prose-code:rounded prose-code:px-1
+    ">
+      <slot />
+    </div>
+
+    <!-- Link para fonte original -->
+    <div class="mt-10 rounded-xl border border-slate-700 bg-slate-800/50 p-5 flex items-center justify-between gap-4">
+      <div>
+        <p class="text-xs text-slate-500 mb-1">Fonte original</p>
+        <p class="text-sm font-medium text-slate-200">{fonte}</p>
+      </div>
+      <a
+        href={fonteUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="shrink-0 rounded-lg border border-indigo-500/40 px-4 py-2 text-sm font-medium text-indigo-300 hover:bg-indigo-500/10 transition-colors"
+      >
+        Ver original →
+      </a>
+    </div>
+
+    <!-- Voltar -->
+    <div class="mt-8">
+      <a href="/" class="text-sm text-slate-500 hover:text-slate-300 transition-colors">← Voltar ao início</a>
+    </div>
+  </div>
+</BaseLayout>
