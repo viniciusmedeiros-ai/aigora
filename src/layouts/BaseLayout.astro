@@ -11,7 +11,7 @@ interface Props {
 
 const {
   title,
-  description = 'AIgora — as últimas notícias sobre IA, LLMs e ferramentas em português.',
+  description = 'AIgora — as últimas notícias sobre IA, LLMs e ferramentas.',
   image = '/placeholders/llms.svg',
   type = 'website',
 } = Astro.props;
@@ -24,7 +24,7 @@ const schemaWebSite = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'AIgora',
-  description: 'Notícias sobre IA, LLMs e ferramentas em português',
+  description: 'Notícias sobre IA, LLMs e ferramentas',
   url: Astro.site?.toString(),
   potentialAction: {
     '@type': 'SearchAction',
