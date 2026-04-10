@@ -7,12 +7,12 @@ interface Props {
 const { categoria, size = 'md' } = Astro.props;
 
 const map: Record<string, { label: string; classes: string }> = {
-  'llms':             { label: 'LLMs',           classes: 'bg-violet-500/15 text-violet-300 border-violet-500/30' },
-  'ferramentas':      { label: 'Ferramentas',     classes: 'bg-cyan-500/15 text-cyan-300 border-cyan-500/30' },
-  'claude-anthropic': { label: 'Claude & Anthropic', classes: 'bg-indigo-500/15 text-indigo-300 border-indigo-500/30' },
-  'marketing-ia':     { label: 'Marketing com IA', classes: 'bg-orange-500/15 text-orange-300 border-orange-500/30' },
-  'atualizacoes':     { label: 'Atualizações',    classes: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30' },
-  'tutoriais':        { label: 'Tutoriais',        classes: 'bg-pink-500/15 text-pink-300 border-pink-500/30' },
+  'claude-code': { label: 'Claude Code',     classes: 'bg-indigo-500/15 text-indigo-300 border-indigo-500/30' },
+  'claude':      { label: 'Claude',          classes: 'bg-violet-500/15 text-violet-300 border-violet-500/30' },
+  'novas-ias':   { label: 'Novas IAs',       classes: 'bg-cyan-500/15 text-cyan-300 border-cyan-500/30' },
+  'atualizacoes':{ label: 'Atualizações',    classes: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30' },
+  'mcps':        { label: 'MCPs',            classes: 'bg-orange-500/15 text-orange-300 border-orange-500/30' },
+  'agents':      { label: 'Skills & Agents', classes: 'bg-pink-500/15 text-pink-300 border-pink-500/30' },
 };
 
 const { label, classes } = map[categoria] ?? { label: categoria, classes: 'bg-slate-500/15 text-slate-300 border-slate-500/30' };

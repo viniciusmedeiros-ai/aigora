@@ -1,13 +1,15 @@
 ---
-title: "Accelerating the next phase of AI"
+title: "Acelerando a próxima fase da IA"
 date: 2026-03-31
-categoria: "llms"
+categoria: "atualizacoes"
 fonte: "OpenAI"
 fonteUrl: "https://openai.com/index/accelerating-the-next-phase-ai"
-resumo: "OpenAI raises $122 billion in new funding to expand frontier AI globally, invest in next-generation compute, and meet growing demand for ChatGPT, Codex, and enterprise AI."
+resumo: "A OpenAI arrecada $ 122 bilhões em novos financiamentos para expandir a IA de fronteira globalmente, investir em computação de próxima geração e atender à crescente demanda por ChatGPT, Codex e IA empresarial."
 destaque: false
 ---
 
-OpenAI raises $122 billion in new funding to expand frontier AI globally, invest in next-generation compute, and meet growing demand for ChatGPT, Codex, and enterprise AI.
+A OpenAI arrecada $ 122 bilhões em novos financiamentos para expandir a IA de fronteira globalmente, investir em computação de próxima geração e atender à crescente demanda por ChatGPT, Codex e IA empresarial.
 
-[Leia o artigo completo em OpenAI](https://openai.com/index/accelerating-the-next-phase-ai)
+---
+
+**Fonte original:** [OpenAI](https://openai.com/index/accelerating-the-next-phase-ai)

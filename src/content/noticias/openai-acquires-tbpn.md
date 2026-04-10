@@ -1,13 +1,15 @@
 ---
-title: "OpenAI acquires TBPN"
+title: "OpenAI adquire TBPN"
 date: 2026-04-02
-categoria: "llms"
+categoria: "atualizacoes"
 fonte: "OpenAI"
 fonteUrl: "https://openai.com/index/openai-acquires-tbpn"
-resumo: "OpenAI acquires TBPN to accelerate global conversations around AI and support independent media, expanding dialogue with builders, businesses, and the broader tech community."
+resumo: "A OpenAI adquire a TBPN para acelerar as conversas globais em torno da IA e apoiar a mídia independente, expandindo o diálogo com construtores, empresas e a comunidade tecnológica em geral."
 destaque: false
 ---
 
-OpenAI acquires TBPN to accelerate global conversations around AI and support independent media, expanding dialogue with builders, businesses, and the broader tech community.
+A OpenAI adquire a TBPN para acelerar as conversas globais em torno da IA e apoiar a mídia independente, expandindo o diálogo com construtores, empresas e a comunidade tecnológica em geral.
 
-[Leia o artigo completo em OpenAI](https://openai.com/index/openai-acquires-tbpn)
+---
+
+**Fonte original:** [OpenAI](https://openai.com/index/openai-acquires-tbpn)

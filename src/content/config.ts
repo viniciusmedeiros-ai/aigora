@@ -5,7 +5,7 @@ const noticias = defineCollection({
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),
-    categoria: z.enum(['llms', 'ferramentas', 'claude-anthropic', 'marketing-ia', 'atualizacoes', 'tutoriais']),
+    categoria: z.enum(['claude-code', 'claude', 'novas-ias', 'atualizacoes', 'mcps', 'agents']),
     fonte: z.string(),
     fonteUrl: z.string().url(),
     resumo: z.string(),

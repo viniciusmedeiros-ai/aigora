@@ -1,13 +1,15 @@
 ---
-title: "Announcing the OpenAI Safety Fellowship"
+title: "Anunciando a Bolsa de Segurança OpenAI"
 date: 2026-04-06
-categoria: "llms"
+categoria: "atualizacoes"
 fonte: "OpenAI"
 fonteUrl: "https://openai.com/index/introducing-openai-safety-fellowship"
-resumo: "A pilot program to support independent safety and alignment research and develop the next generation of talent"
+resumo: "Um programa piloto para apoiar pesquisas independentes de segurança e alinhamento e desenvolver a próxima geração de talentos"
 destaque: false
 ---
 
-A pilot program to support independent safety and alignment research and develop the next generation of talent
+Um programa piloto para apoiar pesquisas independentes de segurança e alinhamento e desenvolver a próxima geração de talentos
 
-[Leia o artigo completo em OpenAI](https://openai.com/index/introducing-openai-safety-fellowship)
+---
+
+**Fonte original:** [OpenAI](https://openai.com/index/introducing-openai-safety-fellowship)

@@ -1,13 +1,15 @@
 ---
-title: "Helping disaster response teams turn AI into action across Asia"
+title: "Ajudar as equipes de resposta a desastres a transformar a IA em ação em toda a Ásia"
 date: 2026-03-29
-categoria: "llms"
+categoria: "atualizacoes"
 fonte: "OpenAI"
 fonteUrl: "https://openai.com/index/helping-disaster-response-teams-asia"
-resumo: "AI for Disaster Response in Asia: OpenAI Workshop with Gates Foundation"
+resumo: "IA para Resposta a Desastres na Ásia: Workshop OpenAI com a Fundação Gates"
 destaque: false
 ---
 
-AI for Disaster Response in Asia: OpenAI Workshop with Gates Foundation
+IA para Resposta a Desastres na Ásia: Workshop OpenAI com a Fundação Gates
 
-[Leia o artigo completo em OpenAI](https://openai.com/index/helping-disaster-response-teams-asia)
+---
+
+**Fonte original:** [OpenAI](https://openai.com/index/helping-disaster-response-teams-asia)

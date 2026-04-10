@@ -1,13 +1,17 @@
 ---
-title: "OpenAI Full Fan Mode Contest: Terms & Conditions"
+title: "Concurso de Modo de Fã Completo OpenAI: Termos e Condições"
 date: 2026-04-09
-categoria: "llms"
+categoria: "atualizacoes"
 fonte: "OpenAI"
 fonteUrl: "https://openai.com/index/full-fan-mode-contest-terms-conditions"
-resumo: "Explore the official terms and conditions for the OpenAI Full Fan Mode Contest, including eligibility, entry steps, judging criteria, and prize details. Learn how to participate, submit your entry on Instagram, and win I"
+resumo: "Explore os termos e condições oficiais do OpenAI Full Fan Mode Contest, incluindo elegibilidade, etapas de inscrição, critérios de julgamento e detalhes do prêmio. Saiba como participar, enviar sua inscrição no Instagram e ganhar ingressos para partidas da IPL."
 destaque: false
 ---
 
-Explore the official terms and conditions for the OpenAI Full Fan Mode Contest, including eligibility, entry steps, judging criteria, and prize details. Learn how to participate, submit your entry on Instagram, and win I
+Explore os termos e condições oficiais do OpenAI Full Fan Mode Contest, incluindo elegibilidade, etapas de inscrição, critérios de julgamento e detalhes do prêmio.
 
-[Leia o artigo completo em OpenAI](https://openai.com/index/full-fan-mode-contest-terms-conditions)
+Saiba como participar, enviar sua inscrição no Instagram e ganhar ingressos para partidas da IPL.
+
+---
+
+**Fonte original:** [OpenAI](https://openai.com/index/full-fan-mode-contest-terms-conditions)

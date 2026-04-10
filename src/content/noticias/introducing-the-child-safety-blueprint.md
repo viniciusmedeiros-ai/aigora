@@ -1,13 +1,15 @@
 ---
-title: "Introducing the Child Safety Blueprint"
+title: "Apresentando o Plano de Segurança Infantil"
 date: 2026-04-08
-categoria: "llms"
+categoria: "atualizacoes"
 fonte: "OpenAI"
 fonteUrl: "https://openai.com/index/introducing-child-safety-blueprint"
-resumo: "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online."
+resumo: "Descubra o Child Safety Blueprint da OpenAI - um roteiro para criar IA de forma responsável com salvaguardas, design adequado à idade e colaboração para proteger e capacitar jovens online."
 destaque: false
 ---
 
-Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.
+Descubra o Child Safety Blueprint da OpenAI - um roteiro para criar IA de forma responsável com salvaguardas, design adequado à idade e colaboração para proteger e capacitar jovens online.
 
-[Leia o artigo completo em OpenAI](https://openai.com/index/introducing-child-safety-blueprint)
+---
+
+**Fonte original:** [OpenAI](https://openai.com/index/introducing-child-safety-blueprint)
