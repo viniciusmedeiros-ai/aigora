@@ -94,8 +94,19 @@ const parser = new Parser({
 
 // --- Helpers ---
 
-function slugify(text) {
+function decodeHtmlEntities(text) {
   return text
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(n))
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;|&#39;/g, "'")
+    .replace(/&nbsp;/g, ' ');
+}
+
+function slugify(text) {
+  return decodeHtmlEntities(text)
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
