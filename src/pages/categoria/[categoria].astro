@@ -4,14 +4,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import NewsCard from '../../components/NewsCard.astro';
 
 export async function getStaticPaths() {
-  const cats = ['claude-code', 'claude', 'novas-ias', 'atualizacoes', 'mcps', 'agents'];
+  const cats = ['claude', 'novas-ias', 'atualizacoes', 'mcps', 'agents'];
   return cats.map((categoria) => ({ params: { categoria } }));
 }
 
 const { categoria } = Astro.params;
 
 const labelsMap: Record<string, string> = {
-  'claude-code':  'Claude Code & CoWork',
   'claude':       'Claude & Anthropic',
   'novas-ias':    'Novas IAs',
   'atualizacoes': 'Atualizações de IAs',

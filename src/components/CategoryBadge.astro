@@ -7,8 +7,7 @@ interface Props {
 const { categoria, size = 'md' } = Astro.props;
 
 const map: Record<string, { label: string; classes: string }> = {
-  'claude-code': { label: 'Claude Code',     classes: 'bg-indigo-500/15 text-indigo-300 border-indigo-500/30' },
-  'claude':      { label: 'Claude',          classes: 'bg-violet-500/15 text-violet-300 border-violet-500/30' },
+  'claude':      { label: 'Claude',          classes: 'bg-indigo-500/15 text-indigo-300 border-indigo-500/30' },
   'novas-ias':   { label: 'Novas IAs',       classes: 'bg-cyan-500/15 text-cyan-300 border-cyan-500/30' },
   'atualizacoes':{ label: 'Atualizações',    classes: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30' },
   'mcps':        { label: 'MCPs',            classes: 'bg-orange-500/15 text-orange-300 border-orange-500/30' },

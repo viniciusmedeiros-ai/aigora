@@ -1,7 +1,7 @@
 ---
 title: "Limpeza Claude Code Paste"
 date: 2026-04-06
-categoria: "claude-code"
+categoria: "claude"
 fonte: "Simon Willison"
 fonteUrl: "https://simonwillison.net/2026/Apr/6/cleanup-claude-code-paste/#atom-everything"
 resumo: ""

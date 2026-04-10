@@ -24,12 +24,10 @@ const MAX_AGE_HOURS   = parseInt(process.env.MAX_AGE_HOURS ?? '48');
 
 // --- Categorias e palavras-chave ---
 const CATEGORIES = {
-  'claude-code': [
-    'claude code', 'claude-code', 'claude cli', 'claude terminal', 'claude cowork',
-    'claude desktop', 'mcp server', 'claude agent sdk', 'claude hooks',
-  ],
   'claude': [
-    'anthropic', 'claude 3', 'claude 4', 'claude sonnet', 'claude opus', 'claude haiku',
+    'anthropic', 'claude code', 'claude-code', 'claude cli', 'claude terminal',
+    'claude cowork', 'claude desktop', 'claude agent sdk', 'claude hooks',
+    'claude 3', 'claude 4', 'claude sonnet', 'claude opus', 'claude haiku',
     'claude model', 'new claude', 'claude update', 'constitutional ai',
   ],
   'mcps': [
@@ -152,7 +150,7 @@ function detectCategory(text) {
   // Bloquear artigos fora do tema
   if (BLOCKLIST.some(w => lower.includes(w))) return null;
   // Verificar categorias por prioridade
-  const order = ['claude-code', 'mcps', 'agents', 'claude', 'novas-ias', 'atualizacoes'];
+  const order = ['mcps', 'agents', 'claude', 'novas-ias', 'atualizacoes'];
   for (const cat of order) {
     if (CATEGORIES[cat].some(kw => lower.includes(kw))) return cat;
   }

@@ -1,7 +1,7 @@
 ---
 title: "O ChatGPT tem uma nova assinatura Pro de $ 100 por mês"
 date: 2026-04-09
-categoria: "claude-code"
+categoria: "claude"
 fonte: "The Verge AI"
 fonteUrl: "https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new"
 resumo: "A OpenAI anunciou uma nova versão de sua assinatura ChatGPT Pro que custa $ 100 por mês. O novo nível Pro oferece \"5x mais\" uso de sua ferramenta de codificação Codex do que a assinatura Plus de $ 20 por mês e \"é melhor para sessões de Codex mais longas e de alto esforço\", diz a OpenAI.
