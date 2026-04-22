@@ -11,13 +11,12 @@ const destaque = noticias.find(n => n.data.destaque) ?? noticias[0];
 const grid = noticias.filter(n => n.id !== destaque.id).slice(0, 9);
 
 const categorias = [
-  { label: 'Tudo',      href: '/' },
-  { label: 'LLMs',      href: '/categoria/llms' },
-  { label: 'Ferramentas', href: '/categoria/ferramentas' },
-  { label: 'Claude',    href: '/categoria/claude-anthropic' },
-  { label: 'Marketing', href: '/categoria/marketing-ia' },
-  { label: 'Atualizações', href: '/categoria/atualizacoes' },
-  { label: 'Tutoriais', href: '/categoria/tutoriais' },
+  { label: 'Tudo',            href: '/' },
+  { label: 'Claude',          href: '/categoria/claude' },
+  { label: 'Novas IAs',       href: '/categoria/novas-ias' },
+  { label: 'Atualizações',    href: '/categoria/atualizacoes' },
+  { label: 'MCPs',            href: '/categoria/mcps' },
+  { label: 'Skills & Agents', href: '/categoria/agents' },
 ];
 
 const formattedDestaque = new Intl.DateTimeFormat('pt-BR', {
@@ -26,59 +25,59 @@ const formattedDestaque = new Intl.DateTimeFormat('pt-BR', {
 ---
 
 <BaseLayout title="As últimas do mundo IA" description="AIgora — notícias sobre IA, LLMs, ferramentas e práticas. Atualizado automaticamente.">
-  <!-- Hero -->
-  <section class="relative overflow-hidden border-b border-slate-800">
-    <!-- Glow de fundo -->
-    <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-transparent to-cyan-900/10"></div>
-    <div class="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-indigo-600/10 blur-3xl"></div>
-    <div class="pointer-events-none absolute -top-16 right-0 h-64 w-64 rounded-full bg-cyan-600/10 blur-3xl"></div>
 
-    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-20">
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-[rgba(255,255,255,0.08)]">
+    <!-- Glows de fundo -->
+    <div class="pointer-events-none absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-[#E6007E] opacity-[0.06] blur-3xl"></div>
+    <div class="pointer-events-none absolute -top-20 right-0 h-[400px] w-[400px] rounded-full bg-[#00BCD4] opacity-[0.05] blur-3xl"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-24">
       <div class="max-w-3xl">
-        <!-- Tagline -->
-        <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1">
-          <span class="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
-          <span class="text-xs font-medium text-indigo-300">Atualizado automaticamente</span>
+        <!-- Tagline pill -->
+        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.04)] px-4 py-1.5">
+          <span class="h-1.5 w-1.5 rounded-full bg-[#E6007E] animate-pulse"></span>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-[#b3b3b3]">Atualizado a cada 6 horas</span>
         </div>
 
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight tracking-tight">
+        <h1 class="text-4xl sm:text-6xl font-bold text-white leading-tight tracking-tight">
           As últimas do<br/>
-          <span class="bg-brand-gradient bg-clip-text text-transparent">mundo IA</span>
+          <span class="text-[#00BCD4]">mundo IA</span>
         </h1>
-        <p class="mt-4 text-base sm:text-lg text-slate-400 max-w-xl leading-relaxed">
-          Notícias sobre Claude Code, MCPs, Agents, novas IAs e muito mais — atualizadas a cada 6 horas.
+        <p class="mt-5 text-base sm:text-lg text-[#b3b3b3] max-w-xl leading-relaxed">
+          Notícias sobre Claude, MCPs, Agents, novas IAs e muito mais.
         </p>
       </div>
     </div>
   </section>
 
   <!-- Destaque -->
-  <section class="mx-auto max-w-7xl px-4 sm:px-6 pt-10">
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 pt-12">
     <div class="mb-6 flex items-center gap-3">
-      <span class="h-px flex-1 bg-slate-800"></span>
-      <span class="text-xs font-semibold uppercase tracking-widest text-slate-500">Destaque</span>
-      <span class="h-px flex-1 bg-slate-800"></span>
+      <span class="h-px flex-1 bg-[rgba(255,255,255,0.06)]"></span>
+      <span class="text-[10px] font-bold uppercase tracking-widest text-[#b3b3b3]/60">Destaque</span>
+      <span class="h-px flex-1 bg-[rgba(255,255,255,0.06)]"></span>
     </div>
 
-    <a href={`/noticias/${destaque.slug}`} class="group block rounded-2xl border border-indigo-500/30 bg-gradient-to-br from-indigo-500/10 to-cyan-500/5 p-6 sm:p-8 hover:border-indigo-500/50 transition-all">
+    <a href={`/noticias/${destaque.slug}`} class="group block rounded-2xl border border-[rgba(0,188,212,0.20)] bg-[#0a0a0a] p-6 sm:p-8 hover:border-[rgba(0,188,212,0.45)] hover:shadow-[0_0_40px_rgba(0,188,212,0.08)] transition-all duration-300">
       <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
         <div class="flex-1">
           <div class="flex items-center gap-3 mb-3">
-            <span class="inline-flex items-center rounded-full bg-indigo-500/20 border border-indigo-500/40 px-2.5 py-0.5 text-xs font-medium text-indigo-300">
+            <span class="inline-flex items-center rounded-full border border-[rgba(0,188,212,0.30)] bg-[rgba(0,188,212,0.10)] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-[#00BCD4]">
               Destaque
             </span>
-            <time class="text-xs text-slate-500">{formattedDestaque}</time>
+            <time class="text-[10px] uppercase tracking-widest text-[#b3b3b3]/50">{formattedDestaque}</time>
           </div>
-          <h2 class="text-xl sm:text-2xl font-bold text-white group-hover:text-indigo-200 transition-colors leading-snug">
+          <h2 class="text-xl sm:text-2xl font-bold text-white group-hover:text-[#00BCD4] transition-colors leading-snug">
             {destaque.data.title}
           </h2>
-          <p class="mt-3 text-sm sm:text-base text-slate-400 line-clamp-2 sm:line-clamp-3 leading-relaxed">
+          <p class="mt-3 text-sm text-[#b3b3b3] line-clamp-2 sm:line-clamp-3 leading-relaxed">
             {destaque.data.resumo}
           </p>
         </div>
         <div class="shrink-0 self-end sm:self-center">
-          <span class="inline-flex items-center gap-1.5 rounded-lg bg-indigo-500/15 border border-indigo-500/30 px-4 py-2 text-sm font-medium text-indigo-300 group-hover:bg-indigo-500/25 transition-colors">
-            Ler artigo <span>→</span>
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-[#00BCD4] px-5 py-2 text-xs font-bold uppercase tracking-widest text-[#00BCD4] group-hover:bg-[#00BCD4] group-hover:text-white transition-all duration-300">
+            Ler artigo →
           </span>
         </div>
       </div>
@@ -91,10 +90,10 @@ const formattedDestaque = new Intl.DateTimeFormat('pt-BR', {
       {categorias.map(({ label, href }) => (
         <a
           href={href}
-          class={`shrink-0 rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${
+          class={`shrink-0 rounded-full border px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 ${
             href === '/'
-              ? 'border-indigo-500/50 bg-indigo-500/15 text-indigo-300'
-              : 'border-slate-700 text-slate-400 hover:border-slate-600 hover:text-slate-200'
+              ? 'border-[#00BCD4] bg-[rgba(0,188,212,0.10)] text-[#00BCD4]'
+              : 'border-[rgba(255,255,255,0.10)] text-[#b3b3b3] hover:border-[rgba(255,255,255,0.25)] hover:text-white'
           }`}
         >
           {label}
@@ -120,8 +119,8 @@ const formattedDestaque = new Intl.DateTimeFormat('pt-BR', {
     </div>
 
     {noticias.length > 10 && (
-      <div class="mt-8 text-center">
-        <a href="/arquivo" class="inline-flex rounded-lg border border-slate-700 px-6 py-2.5 text-sm font-medium text-slate-400 hover:border-slate-600 hover:text-slate-200 transition-colors">
+      <div class="mt-10 text-center">
+        <a href="/arquivo" class="inline-flex rounded-full border border-[rgba(255,255,255,0.15)] px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-[#b3b3b3] hover:border-white hover:text-white transition-all duration-300">
           Ver todas as notícias
         </a>
       </div>
@@ -130,14 +129,16 @@ const formattedDestaque = new Intl.DateTimeFormat('pt-BR', {
 
   <!-- CTA Newsletter -->
   <section class="mx-auto max-w-7xl px-4 sm:px-6 pb-16">
-    <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-600/20 to-cyan-600/10 border border-indigo-500/20 p-8 sm:p-12 text-center">
-      <div class="pointer-events-none absolute inset-0 bg-brand-gradient-soft"></div>
+    <div class="relative overflow-hidden rounded-2xl bg-[#0a0a0a] border border-[rgba(0,188,212,0.20)] p-8 sm:p-12 text-center">
+      <!-- Orbs decorativos -->
+      <div class="pointer-events-none absolute top-0 right-0 w-64 h-64 rounded-full bg-[#00BCD4] opacity-[0.05] -mr-32 -mt-32 blur-3xl"></div>
+      <div class="pointer-events-none absolute bottom-0 left-0 w-48 h-48 rounded-full bg-[#E6007E] opacity-[0.04] -ml-20 -mb-20 blur-3xl"></div>
       <div class="relative">
-        <div class="mb-2 text-2xl">📬</div>
-        <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">
+        <p class="text-[10px] font-bold uppercase tracking-widest text-[#b3b3b3] mb-3">Newsletter quinzenal</p>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">
           Sem tempo de acompanhar tudo?
         </h2>
-        <p class="text-slate-400 mb-8 max-w-md mx-auto text-sm sm:text-base">
+        <p class="text-[#b3b3b3] mb-8 max-w-md mx-auto text-sm sm:text-base">
           Receba o compilado das principais notícias a cada quinzena — direto na sua caixa de entrada, sem spam.
         </p>
         <NewsletterForm />

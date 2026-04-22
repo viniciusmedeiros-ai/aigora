@@ -22,23 +22,21 @@ const formattedDate = new Intl.DateTimeFormat('pt-BR', {
 }).format(date);
 
 const placeholders: Record<string, string> = {
-  'llms':             '/placeholders/llms.svg',
-  'ferramentas':      '/placeholders/ferramentas.svg',
-  'claude-anthropic': '/placeholders/claude.svg',
-  'marketing-ia':     '/placeholders/marketing.svg',
-  'atualizacoes':     '/placeholders/atualizacoes.svg',
-  'tutoriais':        '/placeholders/tutoriais.svg',
+  'claude':       '/placeholders/claude.svg',
+  'novas-ias':    '/placeholders/llms.svg',
+  'atualizacoes': '/placeholders/atualizacoes.svg',
+  'mcps':         '/placeholders/ferramentas.svg',
+  'agents':       '/placeholders/tutoriais.svg',
 };
 const imgSrc = imagem || placeholders[categoria] || '/placeholders/llms.svg';
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const categoriaLabel: Record<string, string> = {
-  'llms':             'LLMs & Modelos',
-  'ferramentas':      'Ferramentas',
-  'claude-anthropic': 'Claude & Anthropic',
-  'marketing-ia':     'Marketing com IA',
-  'atualizacoes':     'Atualizações',
-  'tutoriais':        'Tutoriais & Práticas',
+  'claude':       'Claude & Anthropic',
+  'novas-ias':    'Novas IAs',
+  'atualizacoes': 'Atualizações',
+  'mcps':         'MCPs',
+  'agents':       'Skills & Agents',
 };
 
 const schemaNewsArticle = {
@@ -64,8 +62,8 @@ const schemaBreadcrumb = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Início',                  item: Astro.site?.toString() },
-    { '@type': 'ListItem', position: 2, name: categoriaLabel[categoria],  item: new URL(`/categoria/${categoria}`, Astro.site).toString() },
+    { '@type': 'ListItem', position: 1, name: 'Início',                   item: Astro.site?.toString() },
+    { '@type': 'ListItem', position: 2, name: categoriaLabel[categoria],   item: new URL(`/categoria/${categoria}`, Astro.site).toString() },
     { '@type': 'ListItem', position: 3, name: title },
   ],
 };
@@ -76,29 +74,29 @@ const schemaBreadcrumb = {
   <script type="application/ld+json" set:html={JSON.stringify(schemaBreadcrumb)} slot="head-extra" />
 
   <div class="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-    <!-- Breadcrumb visual -->
-    <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs text-slate-500 mb-8">
-      <a href="/" class="hover:text-slate-300 transition-colors">Início</a>
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[10px] uppercase tracking-widest text-[#b3b3b3]/50 mb-10">
+      <a href="/" class="hover:text-white transition-colors">Início</a>
       <span aria-hidden="true">/</span>
-      <a href={`/categoria/${categoria}`} class="hover:text-slate-300 transition-colors">
+      <a href={`/categoria/${categoria}`} class="hover:text-white transition-colors">
         {categoriaLabel[categoria]}
       </a>
       <span aria-hidden="true">/</span>
-      <span class="text-slate-400 truncate max-w-xs">{title}</span>
+      <span class="text-[#b3b3b3]/30 truncate max-w-xs">{title}</span>
     </nav>
 
     <!-- Header do artigo -->
-    <header class="mb-6">
+    <header class="mb-8">
       <div class="flex items-center gap-3 mb-4">
         <CategoryBadge categoria={categoria} />
-        <time class="text-sm text-slate-500 capitalize" datetime={date.toISOString()}>{formattedDate}</time>
+        <time class="text-[10px] uppercase tracking-widest text-[#b3b3b3]/50 capitalize" datetime={date.toISOString()}>{formattedDate}</time>
       </div>
       <h1 class="text-2xl sm:text-3xl font-bold text-white leading-tight mb-4">{title}</h1>
-      <p class="text-lg text-slate-400 leading-relaxed">{resumo}</p>
+      <p class="text-base text-[#b3b3b3] leading-relaxed">{resumo}</p>
     </header>
 
     <!-- Imagem de destaque -->
-    <div class="mb-8 rounded-xl overflow-hidden">
+    <div class="mb-8 rounded-2xl overflow-hidden">
       <img
         src={imgSrc}
         alt={title}
@@ -113,37 +111,37 @@ const schemaBreadcrumb = {
     </div>
 
     <!-- Divisor -->
-    <div class="h-px bg-gradient-to-r from-indigo-500/50 via-cyan-500/50 to-transparent mb-8"></div>
+    <div class="h-px bg-[rgba(0,188,212,0.30)] mb-10"></div>
 
     <!-- Conteúdo -->
-    <div class="prose prose-invert prose-slate prose-lg max-w-none
-      prose-headings:text-white prose-headings:font-semibold
-      prose-p:text-slate-300 prose-p:leading-relaxed
-      prose-a:text-indigo-400 prose-a:no-underline hover:prose-a:text-indigo-300
+    <div class="prose prose-invert max-w-none
+      prose-headings:text-white prose-headings:font-bold prose-headings:tracking-tight
+      prose-p:text-[#b3b3b3] prose-p:leading-relaxed
+      prose-a:text-[#00BCD4] prose-a:no-underline hover:prose-a:text-white
       prose-strong:text-white
-      prose-code:text-cyan-300 prose-code:bg-slate-800 prose-code:rounded prose-code:px-1
+      prose-code:text-[#00BCD4] prose-code:bg-[#111] prose-code:rounded prose-code:px-1
     ">
       <slot />
     </div>
 
     <!-- Fonte original -->
-    <div class="mt-10 rounded-xl border border-slate-700 bg-slate-800/50 p-5 flex items-center justify-between gap-4">
+    <div class="mt-12 rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[#0a0a0a] p-5 flex items-center justify-between gap-4">
       <div>
-        <p class="text-xs text-slate-500 mb-1">Fonte original</p>
-        <p class="text-sm font-medium text-slate-200">{fonte}</p>
+        <p class="text-[10px] uppercase tracking-widest text-[#b3b3b3]/40 mb-1">Fonte original</p>
+        <p class="text-sm font-semibold text-white">{fonte}</p>
       </div>
       <a
         href={fonteUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="shrink-0 rounded-lg border border-indigo-500/40 px-4 py-2 text-sm font-medium text-indigo-300 hover:bg-indigo-500/10 transition-colors"
+        class="shrink-0 rounded-full border border-[#00BCD4] px-5 py-2 text-xs font-bold uppercase tracking-widest text-[#00BCD4] hover:bg-[#00BCD4] hover:text-white transition-all duration-300"
       >
         Ver original →
       </a>
     </div>
 
     <div class="mt-8">
-      <a href="/" class="text-sm text-slate-500 hover:text-slate-300 transition-colors">← Voltar ao início</a>
+      <a href="/" class="text-[10px] uppercase tracking-widest text-[#b3b3b3]/50 hover:text-white transition-colors">← Voltar ao início</a>
     </div>
   </div>
 </BaseLayout>

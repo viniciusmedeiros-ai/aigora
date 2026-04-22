@@ -20,19 +20,17 @@ const formattedDate = new Intl.DateTimeFormat('pt-BR', {
   year: 'numeric',
 }).format(date);
 
-// Placeholder por categoria quando não há imagem
 const placeholders: Record<string, string> = {
-  'llms':             '/placeholders/llms.svg',
-  'ferramentas':      '/placeholders/ferramentas.svg',
-  'claude-anthropic': '/placeholders/claude.svg',
-  'marketing-ia':     '/placeholders/marketing.svg',
-  'atualizacoes':     '/placeholders/atualizacoes.svg',
-  'tutoriais':        '/placeholders/tutoriais.svg',
+  'claude':       '/placeholders/claude.svg',
+  'novas-ias':    '/placeholders/llms.svg',
+  'atualizacoes': '/placeholders/atualizacoes.svg',
+  'mcps':         '/placeholders/ferramentas.svg',
+  'agents':       '/placeholders/tutoriais.svg',
 };
 const imgSrc = imagem || placeholders[categoria] || '/placeholders/llms.svg';
 ---
 
-<article class={`group flex flex-col rounded-xl border overflow-hidden transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/30 ${destaque ? 'border-indigo-500/40 bg-gradient-to-br from-indigo-500/10 to-cyan-500/10' : 'border-slate-700/60 bg-slate-800/60 hover:border-slate-600/80'}`}>
+<article class="group flex flex-col rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[#0a0a0a] overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-[rgba(255,255,255,0.18)] hover:shadow-2xl">
 
   <!-- Imagem -->
   <a href={`/noticias/${slug}`} class="block overflow-hidden" tabindex="-1" aria-hidden="true">
@@ -43,7 +41,7 @@ const imgSrc = imagem || placeholders[categoria] || '/placeholders/llms.svg';
       height="360"
       loading="lazy"
       decoding="async"
-      class="w-full h-44 object-cover transition-transform duration-300 group-hover:scale-105"
+      class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105"
       onerror={`this.src='${placeholders[categoria] || '/placeholders/llms.svg'}'`}
     />
   </a>
@@ -51,24 +49,24 @@ const imgSrc = imagem || placeholders[categoria] || '/placeholders/llms.svg';
   <!-- Categoria + data -->
   <div class="flex items-center justify-between px-5 pt-4 pb-2">
     <CategoryBadge categoria={categoria} size="sm" />
-    <time class="text-xs text-slate-500" datetime={date.toISOString()}>{formattedDate}</time>
+    <time class="text-[10px] uppercase tracking-widest text-[#b3b3b3]/60" datetime={date.toISOString()}>{formattedDate}</time>
   </div>
 
   <!-- Título e resumo -->
   <div class="flex-1 px-5 pb-4">
     <a href={`/noticias/${slug}`} class="block">
-      <h2 class={`font-semibold leading-snug transition-colors group-hover:text-indigo-300 ${destaque ? 'text-lg text-white' : 'text-base text-slate-100'}`}>
+      <h2 class="font-semibold text-base text-white leading-snug transition-colors group-hover:text-[#00BCD4]">
         {title}
       </h2>
     </a>
-    <p class="mt-2 text-sm text-slate-400 line-clamp-2">{resumo}</p>
+    <p class="mt-2 text-sm text-[#b3b3b3] line-clamp-2 leading-relaxed">{resumo}</p>
   </div>
 
   <!-- Fonte -->
-  <div class="flex items-center justify-between border-t border-slate-700/50 px-5 py-3">
-    <span class="text-xs text-slate-500">{fonte}</span>
-    <a href={`/noticias/${slug}`} class="text-xs font-medium text-indigo-400 hover:text-indigo-300 transition-colors">
-      Ler mais →
+  <div class="flex items-center justify-between border-t border-[rgba(255,255,255,0.06)] px-5 py-3">
+    <span class="text-[10px] uppercase tracking-widest text-[#b3b3b3]/50">{fonte}</span>
+    <a href={`/noticias/${slug}`} class="text-xs font-bold uppercase tracking-widest text-[#00BCD4] hover:text-white transition-colors">
+      Ler →
     </a>
   </div>
 </article>

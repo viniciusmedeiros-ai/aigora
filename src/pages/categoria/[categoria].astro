@@ -27,9 +27,9 @@ const noticias = todas.sort((a, b) => b.data.date.getTime() - a.data.date.getTim
 <BaseLayout title={label} description={`Notícias sobre ${label} — AIgora`}>
   <div class="mx-auto max-w-7xl px-4 sm:px-6 py-12">
     <div class="mb-10">
-      <a href="/" class="text-sm text-slate-500 hover:text-slate-300 transition-colors">← Início</a>
+      <a href="/" class="text-[10px] uppercase tracking-widest text-[#b3b3b3]/50 hover:text-white transition-colors">← Início</a>
       <h1 class="mt-4 text-2xl sm:text-3xl font-bold text-white">{label}</h1>
-      <p class="mt-1 text-slate-500 text-sm">{noticias.length} {noticias.length === 1 ? 'notícia' : 'notícias'}</p>
+      <p class="mt-1 text-[10px] uppercase tracking-widest text-[#b3b3b3]/50">{noticias.length} {noticias.length === 1 ? 'notícia' : 'notícias'}</p>
     </div>
 
     {noticias.length > 0 ? (
@@ -48,9 +48,9 @@ const noticias = todas.sort((a, b) => b.data.date.getTime() - a.data.date.getTim
         ))}
       </div>
     ) : (
-      <div class="rounded-xl border border-slate-700 bg-slate-800/40 p-12 text-center">
-        <p class="text-slate-400">Nenhuma notícia nesta categoria ainda.</p>
-        <p class="mt-1 text-sm text-slate-600">O próximo ciclo de atualização trará novidades.</p>
+      <div class="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[#0a0a0a] p-12 text-center">
+        <p class="text-[#b3b3b3]">Nenhuma notícia nesta categoria ainda.</p>
+        <p class="mt-1 text-xs text-[#b3b3b3]/40">O próximo ciclo de atualização trará novidades.</p>
       </div>
     )}
   </div>
