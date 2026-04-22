@@ -14,6 +14,8 @@ import Parser from 'rss-parser';
 import { writeFileSync, existsSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { Readability } from '@mozilla/readability';
+import { JSDOM } from 'jsdom';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const CONTENT_DIR = join(__dirname, '../src/content/noticias');
@@ -242,6 +244,31 @@ function extractImage(item) {
   return null;
 }
 
+/** Busca o conteúdo completo do artigo na URL original usando Readability */
+async function fetchArticleContent(url, maxParagraphs = 8) {
+  try {
+    const res = await fetch(url, {
+      signal: AbortSignal.timeout(12000),
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; AIgoraBot/1.0; +https://aigora.vercel.app)',
+        'Accept': 'text/html,application/xhtml+xml',
+        'Accept-Language': 'en-US,en;q=0.9',
+      },
+    });
+    if (!res.ok) return null;
+
+    const html = await res.text();
+    const dom = new JSDOM(html, { url });
+    const article = new Readability(dom.window.document).parse();
+    if (!article?.content) return null;
+
+    const paragraphs = extractParagraphs(article.content, 80, maxParagraphs);
+    return paragraphs.length >= 2 ? paragraphs : null;
+  } catch {
+    return null;
+  }
+}
+
 function buildMarkdown({ title, date, categoria, fonte, fonteUrl, resumo, imagem, paragraphs }) {
   const imgLine = imagem ? `\nimagem: "${escapeFrontmatter(imagem)}"` : '';
   const body = paragraphs
@@ -303,12 +330,19 @@ async function run() {
         const filePath = join(CONTENT_DIR, `${slug}.md`);
         if (existsSync(filePath)) { skipped++; continue; }
 
-        // Extrair parágrafos do conteúdo
-        const rawHtml = item.contentEncoded ?? item.content ?? '';
-        const rawParagraphs = extractParagraphs(rawHtml, 60, 4);
+        // Tentar extrair conteúdo completo da página do artigo
+        console.log(`  📄 Buscando artigo: ${link.substring(0, 60)}...`);
+        let rawParagraphs = await fetchArticleContent(link, 8) ?? [];
 
-        // Fallback se não tiver parágrafos suficientes
+        // Fallback: extrair do conteúdo RSS se fetch falhou
+        if (rawParagraphs.length < 2) {
+          const rawHtml = item.contentEncoded ?? item.content ?? '';
+          rawParagraphs = extractParagraphs(rawHtml, 60, 4);
+        }
+
+        // Último fallback: snippet do RSS
         if (rawParagraphs.length === 0) {
+          const rawHtml = item.contentEncoded ?? item.content ?? '';
           const snippet = item.contentSnippet ?? stripHtml(rawHtml);
           if (snippet) rawParagraphs.push(snippet.substring(0, 500));
         }
