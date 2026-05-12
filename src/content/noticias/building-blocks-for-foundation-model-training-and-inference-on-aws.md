@@ -1,0 +1,29 @@
+---
+title: "Blocos de construção para treinamento de modelo de fundação e inferência na AWS"
+date: 2026-05-11
+categoria: "novas-ias"
+fonte: "Hugging Face"
+fonteUrl: "https://huggingface.co/blog/amazon/foundation-model-building-blocks"
+resumo: "Durante muito tempo, \"escalar\" nos modelos básicos significava principalmente uma coisa: gastar mais computação em pré-treinamento e aumentar os recursos. Essa intuição foi apoiada por trabalhos empíricos como Kaplan et al. (2020) , que relataram tendências previsíveis da lei de potência na perda à medida que você escala os parâmetros do modelo, o conjunto de dados"
+destaque: false
+---
+
+Durante muito tempo, "escalar" nos modelos básicos significava principalmente uma coisa: gastar mais computação em pré-treinamento e aumentar os recursos. Essa intuição foi apoiada por trabalhos empíricos como Kaplan et al. (2020) , que relataram tendências previsíveis da lei de potência na perda à medida que você escala os parâmetros do modelo, o tamanho do conjunto de dados e a computação de treinamento. Na prática, essas tendências justificaram o investimento sustentado em capacidade de aceleração em larga escala e a infraestrutura distribuída circundante necessária para mantê-la utilizada de forma eficiente. Mas a fronteira evoluiu - e a escala não é mais uma curva única. O enquadramento "de uma a três leis de dimensionamento" da NVIDIA enfatiza de forma útil que, além do pré-treinamento, o desempenho aumenta cada vez mais através do pós-treinamento (por exemplo, ajuste fino supervisionado (SFT) e reforço métodos baseados em aprendizado (RL)) e por meio de computação em tempo de teste ("pensamento longo", pesquisa/verificação, estratégias de várias amostras).
+
+Em conjunto, esses regimes de dimensionamento impulsionam o ciclo de vida do modelo básico - pré-treinamento, pós-treinamento e inferência - para os requisitos de infraestrutura convergente: computação aceleradora fortemente acoplada, uma rede de baixa latência de alta largura de banda e um back-end de armazenamento distribuído. Eles também levantam a importância da orquestração para o gerenciamento de recursos e da observabilidade em nível de aplicativo e hardware para manter a saúde do cluster e diagnosticar patologias de desempenho em escala.
+
+Outra tendência importante é a crescente dependência do ciclo de vida do modelo básico em um ecossistema de software de código aberto (OSS) que abrange estruturas de desenvolvimento de modelos, gerenciamento de recursos de cluster e ferramentas operacionais. Na camada de cluster, o gerenciamento de recursos é tipicamente fornecido por sistemas como Slurm e Kubernetes . O desenvolvimento de modelos e o treinamento distribuído são comumente implementados em frameworks como PyTorch e JAX . O monitoramento e a visualização - isto é, a observabilidade - são frequentemente alcançados usando o Prometheus para coleta de métricas e o Grafana para visualização e alerta, posicionados como uma camada operacional sobre a infraestrutura e o gerenciamento de recursos. A Figura 1 ilustra essa arquitetura em camadas, mostrando como a infraestrutura de hardware suporta a orquestração de recursos, que em turn habilita frameworks de AM, com observabilidade abrangendo todas as camadas.
+
+Figura 1: A arquitetura em camadas de pilhas de software de código aberto para treinamento e inferência de modelos de fundação
+
+Este post destina-se a engenheiros e pesquisadores de aprendizado de máquina envolvidos no treinamento e inferência de modelos de fundação, com especial atenção aos fluxos de trabalho construídos sobre estruturas OSS. Ele analisa como a infraestrutura da AWS - incluindo computação aceleradora de vários nós, rede de baixa latência e alta largura de banda, armazenamento compartilhado distribuído e serviços gerenciados associados - interage com pilhas OSS comuns em todo o ciclo de vida do modelo básico. O objetivo principal é fornecer uma base técnica para entender os gargalos dos sistemas e as características de dimensionamento, abrangendo pré-treinamento, pós-treinamento e inferência. Este post introdutório traz à tona a arquitetura geral do sistema, enfatizando os pontos de integração entre os componentes da infraestrutura da AWS e as ferramentas de OSS que sustentam a arquitetura em larga escala treinamento distribuído e inferência.
+
+O restante desta série examina como essa arquitetura em camadas é realizada na AWS, progredindo por meio da infraestrutura, orquestração de recursos, pilha de software de AM e observabilidade. As seções a seguir visualizam cada camada.
+
+Conforme ilustrado na Figura 1, a infraestrutura é ancorada por três blocos de construção acoplados - computação acelerada com memória de dispositivo grande, interconexão de largura de banda larga para comunicação coletiva e armazenamento distribuído escalável para dados e pontos de verificação.
+
+A computação acelerada forma a base do modelo de fundação em larga escala pré-treinamento, pós-treinamento e inferência. A AWS oferece várias gerações de GPUs NVIDIA como parte de suas instâncias de computação acelerada do Amazon EC2, incluindo a família de instâncias Amazon EC2 P. A família de instâncias P5 inclui p5.48xlarge com oito GPUs NVIDIA H100, p5.4xlarge com uma única GPU H100 para GPUs de menor escala cargas de trabalho e variantes p5e.48xlarge/p5en.48xlarge com GPUs NVIDIA H200. A família de instâncias P6 apresenta a arquitetura NVIDIA Blackwell B200 com p6-b200.48xlarge e Blackwell Ultra B300 com p6-b300.48xlarge. Ao longo dessas gerações, os eixos de dimensionamento dominantes são a taxa de transferência de tensor de pico, a capacidade e a largura de banda de HBM e a largura de banda de interconexão (dentro e entre nós).
+
+---
+
+**Fonte original:** [Hugging Face](https://huggingface.co/blog/amazon/foundation-model-building-blocks)
