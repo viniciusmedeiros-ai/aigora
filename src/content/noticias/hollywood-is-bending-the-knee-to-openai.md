@@ -1,0 +1,30 @@
+---
+title: "Hollywood está se ajoelhando para a OpenAI"
+date: 2026-06-23
+categoria: "atualizacoes"
+fonte: "The Verge AI"
+fonteUrl: "https://www.theverge.com/entertainment/954899/luca-guadagnino-artificial-sam-altman-amazon-a24-neon-mubi-chatgpt"
+resumo: "Netflix, A24, Focus Features e Warner Bros.' Clockwork teriam decidido deixar de comprar Artificial - o novo drama biográfico do diretor Luca Guadagnino sobre o cofundador / CEO da OpenAI, Sam Altman - para acordos de distribuição. E enquanto Neon e Mubi ainda estão interessados no"
+destaque: false
+imagem: "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25431704/STK201_SAM_ALTMAN_CVIRGINIA_C.jpg?quality=90&#038;strip=all&#038;crop=4.7487503051758,18.543864880511,95.251249694824,81.456135119489"
+---
+
+Netflix, A24, Focus Features e Warner Bros.’ Clockwork teriam decidido deixar de comprar Artificial — o novo drama biográfico do diretor Luca Guadagnino sobre o cofundador / CEO da OpenAI, Sam Altman — para acordos de distribuição. E embora ainda se diga que Neon e Mubi estão interessados no filme, essa situação faz parecer que Hollywood não tem mais coragem de contar histórias críticas sobre Big Tech.
+
+A pós-produção de Artificial estava quase concluída quando a Amazon MGM anunciou inesperadamente na semana passada que não planeja mais distribuir o filme. A notícia foi uma surpresa, dado o quão longe o filme estava e relata que a Amazon inicialmente pretendia fazer uma exibição teatral curta e qualificada para o Oscar ainda este ano. Artificial também teria sido programado para um lançamento mais amplo no início 2027 e uma exibição no SXSW Film &amp; TV Festival, mas esses planos agora estão mortos na água.
+
+Embora a Amazon não tenha entrado em detalhes sobre por que abandonou o Artificial , a empresa disse ao Deadline que sentiu que o filme seria "melhor servido se fosse lançado por um estúdio diferente." Embora a Neon ou a Mubi possam ser casas melhores para o projeto, a decisão da Amazon segue seu investimento de $ 50 bilhões na OpenAI no início deste ano. A Amazon deixou bem claro que quer ser no negócio de IA em grande escala, e é fácil entender por que a empresa pode estar relutante em lançar um filme que retrate um executivo de IA de forma negativa. Mas o maior problema é o fato de que a Amazon provavelmente não será o último estúdio a se mover dessa maneira.
+
+Escrito por Simon Rich, autor de An American Pickle, Artificial narra o período tumultuado em 2023, quando Altman foi demitida da OpenAI e, posteriormente, recontratada apenas alguns dias depois . O drama começou com o conselho de administração da OpenAI alegando que Altman estava dificultando "sua capacidade de exercer suas responsabilidades" por não ser "consistentemente sincero em suas comunicações" (PR corporativo fala por " mentindo .”) Pouco depois, Altman estava pronto para se juntar à Microsoft e centenas de funcionários da OpenAI assinaram uma carta aberta ameaçando demitir-se se ele não fosse reintegrado como CEO. As coisas foram concluídas com Altman retornando à OpenAI e instalando um novo conselho de administração quase inteiramente cheio de novos rostos .
+
+No papel, pelo menos, toda a saga parece um drama que poderia fazer um exame emocionante e oportuno de um dos executivos mais poderosos do Vale do Silício. Depois de projetos como The Audacity , Mountainhead , The Dropout e The Social Reckoning, de Aaron Sorkin, Artificial parece o tipo de filme que se alinha com a recente fixação de Hollywood em histórias sobre titãs da tecnologia. E em nesta era de IA generativa sendo empurrada goela abaixo de todos, o público está preparado para um recurso repleto de estrelas focado em algumas das pessoas responsáveis pela onipresença da tecnologia.
+
+O que é realmente alarmante, porém, é quantos outros estúdios escolheram seguir o exemplo da Amazon. Ontem, o braço de IA DeepMind do Google anunciou que fechou um acordo de "parceria de pesquisa" de $ 75 milhões com a A24 para desenvolver uma série de tecnologias de produção de filmes, como um novo aplicativo de storyboard. As empresas disseram que o acordo não envolverá o acesso do Google à biblioteca de projetos de cinema e TV, mas ainda não deixaram claro até que ponto essas ferramentas serão usadas pelo estúdio. Essa falta de clareza é parte do motivo pelo qual as pessoas já começaram a ter uma visão mais sombria da A24. Na semana passada, o estúdio estava aproveitando o sucesso de Backrooms, mas depois de postar o trailer do próximo musical de Jesse Eisenberg, The Debut , a A24 foi recebida com uma onda de críticas contundentes on-line especificamente por causa da colaboração DeepMind.
+
+As chances de a A24 e a parceria do Google se dissolverem parecem improváveis porque a produtora está longe de ser o único estúdio que decidiu entrar na cama com a geração AI . A Disney fechou ( falhou ) acordos de IA por conta própria , a Netflix absorveu startups de IA e os executivos da Paramount Skydance sinalizaram que veem a tecnologia como fundamental para aumentar a produtividade.
+
+Tudo isso pinta um quadro muito sombrio do possível futuro de Hollywood — um em que filmes e séries são produzidos com a geração AI por estúdios que se recusam a dizer qualquer coisa verdadeiramente perspicaz ou negativa sobre a tecnologia ou seus criadores. Projetos como The AI Doc: Or How I Became an Apocaloptimist já nos mostraram o quão sem inspiração e sem alma os filmes sobre IA podem ser quando são criados por pessoas que parecem estar em dívida com os executivos de tecnologia. E o que estamos vendo agora é uma era potencial de gigantes de Hollywood fazendo tudo ao seu alcance para permanecer nas boas graças do Vale do Silício. Operar dessa maneira — a partir de um lugar de covardia a serviço de lucros impulsionados pela tecnologia — é antitético à produção de boa arte.
+
+---
+
+**Fonte original:** [The Verge AI](https://www.theverge.com/entertainment/954899/luca-guadagnino-artificial-sam-altman-amazon-a24-neon-mubi-chatgpt)
