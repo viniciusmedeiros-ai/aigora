@@ -1,0 +1,32 @@
+---
+title: "O aplicativo de câmera de \"aparência natural\" da Adobe adota IA generativa"
+date: 2026-07-20
+categoria: "atualizacoes"
+fonte: "The Verge AI"
+fonteUrl: "https://www.theverge.com/tech/967791/adobe-indigo-camera-app-ai-playground-update"
+resumo: "Bem-vindo ao debate \"o que é uma foto\", Adobe. | Imagem: Adobe	
+
+O aplicativo de câmera experimental da Adobe tomou um rumo inesperado. Depois que o Projeto Indigo foi lançado no ano passado para fornecer uma \"aparência mais natural (semelhante a SLR)\" para a fotografia do iPhone, o aplicativo da câmera Indigo agora está sendo atualizado com um conjunto de"
+destaque: false
+imagem: "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Adobe-Indigo-AI-Playground-hero.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100"
+---
+
+O aplicativo de câmera experimental da Adobe tomou um rumo inesperado. Depois que o Projeto Indigo foi lançado no ano passado para fornecer uma "aparência mais natural (semelhante à SLR)" para a fotografia do iPhone, o aplicativo da câmera Indigo agora está sendo atualizado com um conjunto de ferramentas de IA generativas. E a mudança não depende dos próprios modelos de IA Firefly da Adobe.
+
+A Adobe descreve o novo conjunto de ferramentas "AI Playground" como um experimento e diz que há um botão que permite aos usuários desativar e continuar usando o aplicativo como antes. O acesso gratuito à suíte sem necessidade de login está sendo testado com uma pequena porcentagem de usuários Indigo nas próximas semanas. “Nosso objetivo é aprender como as pessoas usam a edição baseada em GenAI. Dependendo do seu sucesso, podemos estender o ou expandir o pool de usuários, ou executar experimentos de acompanhamento ", diz Marc Levoy, colega da Adobe, no blog do anúncio. “Se o recurso se mostrar popular, eventualmente ofereceremos uma versão paga.”
+
+O AI Playground do aplicativo Indigo, adicionado com a atualização da versão 1.1, inclui quatro seções: Estilos, Edição de Objetos, Orientação de Fotos e Edição Personalizada. Levoy diz que cada seção contém "vários botões ou alternâncias, que acionam a GenAI com avisos que criamos para eles." Se você não gostar dos resultados de uma edição, você pode pressionar o botão novamente e " normalmente obter algo um pouco diferente."
+
+Styles aplica efeitos de filtro gerados por IA predefinidos a fotografias tiradas usando Indigo, fazendo com que pareçam ilustrações, alterando os efeitos de iluminação e muito mais. A edição de objetos inclui ferramentas que removem pessoas, objetos e outras distrações dos planos de fundo das imagens, com IA generativa usada para preencher os espaços em branco deixados para trás, semelhante ao recurso Magic Eraser do Google. Foto A orientação é um recurso de feedback que permite que a IA analise suas fotos para fornecer sugestões de refilmagens e edição.
+
+Aqui estão alguns exemplos de antes e depois dos novos recursos de remoção de objetos do aplicativo Indigo. "data-chromatic ="ignore" loading="lazy" decoding="async"data-nimg ="fill" sizes="(max-width: 1023px) 100vw, 744px" srcset="https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-20-111104.jpg?quality=90&amp;strip=all&amp;w=376 376w, https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-20-111104.jpg?quality=90&amp;strip=all&amp;w=384 384w, https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-20-111104.jpg?quality=90&amp;strip=all&amp;w=415 415w, https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-20-111104.jpg?quality=90&amp;strip=all&amp;w=480 480w, https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-20-111104.jpg?quality=90&amp;strip=all&amp;w=540 540w, https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-20-111104.jpg?quality=90&amp;strip=all&amp;w=640 640w, https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-20-111104.jpg?quality=90&amp;strip=all&amp;w=750 750w, https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-20-111104.jpg?quality=90&amp;strip=all&amp;w=828 828w, https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-20-111104.jpg?quality=90&amp;strip=all&amp;w=1080 1080w, https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-20-111104.jpg?quality=90&amp;strip=all&amp;w=1200 1200w, https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-20-111104.jpg?quality=90&amp;strip=all&amp;w=1440 1440w, https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-20-111104.jpg?quality=90&amp;strip=all&amp;w=1920 1920w, https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-20-111104.jpg?quality=90&amp;strip=all&amp;w=2048 2048w, https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-20-111104.jpg?quality=90&amp;strip=all&amp;w=2400 2400w" src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-20-111104.jpg?quality=90&amp;strip=all&amp;w=2400"&gt;
+
+1/2 Aqui estão alguns exemplos de antes e depois dos novos recursos de remoção de objetos do aplicativo Indigo. Imagem: Adobe
+
+O último recurso, Edição personalizada, é uma ferramenta de solicitação mais ampla que permite aos usuários descrever como desejam manipular uma imagem com mais detalhes. Por exemplo, se você não estiver satisfeito com os resultados de uma predefinição de Estilos, a Edição Personalizada permite que você especifique o que mais deve ser alterado. A Adobe está se apoiando no modelo Nano Banana AI do Google para esta atualização "começar", mas diz que pode mudar ou introduzir suporte adicional ao modelo com o tempo.
+
+Está muito longe da experiência que a Indigo forneceu no lançamento , com meu colega Allison descrevendo-o como um “aplicativo de câmera construído por nerds de câmera para nerds de câmera." Ele usa recursos de fotografia computacional para ajudar os fotógrafos móveis a capturar imagens de melhor qualidade que recriam a aparência das fotos SLR, além de fornecer controles manuais como foco, velocidade do obturador, ISO e balanço de branco. O a introdução de recursos generativos de edição de IA pode ter sido planejada desde o início, no entanto.
+
+---
+
+**Fonte original:** [The Verge AI](https://www.theverge.com/tech/967791/adobe-indigo-camera-app-ai-playground-update)
