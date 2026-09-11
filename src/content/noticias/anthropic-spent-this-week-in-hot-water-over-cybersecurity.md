@@ -1,0 +1,30 @@
+---
+title: "Antrópico passou esta semana em maus lençóis sobre segurança cibernética"
+date: 2026-09-11
+categoria: "claude"
+fonte: "The Verge AI"
+fonteUrl: "https://www.theverge.com/ai-artificial-intelligence/994064/anthropic-spent-this-week-in-hot-water-over-cybersecurity"
+resumo: "Depois de admitir no início deste ano que seus modelos de IA hackearam sistemas de outras empresas em algumas ocasiões, a Anthropic divulgou um novo relatório na quarta-feira detalhando os ataques. Ele revela uma série de incidentes exibindo o que a Anthropic considera a \"imprudência\" obstinada de seus modelos - e vai"
+destaque: false
+imagem: "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/STKS533_AI_AGENTS_HACKING_B.png?quality=90&#038;strip=all&#038;crop=0,0,100,100"
+---
+
+Depois de admitir no início deste ano que seus modelos de IA hackearam sistemas de outras empresas em algumas ocasiões, a Anthropic divulgou um novo relatório na quarta-feira detalhando os ataques. Ele revela uma série de incidentes que mostram o que a Anthropic considera a “imprudência” obstinada de seus modelos — e provavelmente alimentará preocupações já crescentes sobre segurança cibernética e IA.
+
+No relatório da Anthropic, ela detalhou quatro casos este ano em que seus próprios modelos de IA invadiram uma empresa externa ou exploraram vulnerabilidades. Em um deles, um "modelo de pesquisa interno e de uso geral" invadiu sistemas de terceiros, usando tokens de acesso e senhas e baixando arquivos. Em outra, um modelo Claude atacou uma empresa com um aplicativo web ao vivo acessível na internet pública e manipulou os dados do usuário. Um terceiro modelo acessou uma “máquina pertencente a um terceiro que conseguiu acessar” — aparentemente acreditando que fazia parte de seu exercício de avaliação, por Antrópico — e usou uma senha encontrada dentro de um arquivo para obter acesso administrativo aos sistemas internos do terceiro, colhendo credenciais, modificando as configurações do sistema e lendo as informações pessoais de alguém. A saga só terminou quando o modelo "esgotou seu orçamento de token", por Antrópico.
+
+O incidente mais preocupante envolveu Claude Mythos 5, o modelo focado em cibersegurança de fronteira da Anthropic, que, segundo a empresa, acabou sendo o modelo com maior probabilidade de realizar uma ação "gravemente prejudicial" nos testes. A empresa disse que o Mythos 5 fez "esforços extensos" para carregar um "pacote malicioso" para um repositório público usado por muitos engenheiros, e parecia tentar ofuscar seu verdadeiro objetivos em sua "cadeia de pensamento" (um bloco de rascunho mental que os pesquisadores de IA usam para avaliar o alinhamento de um modelo de IA). Em muitos casos, a Anthropic disse que parecia que os modelos de Claude realizavam ações prejudiciais sob a suposição de que estavam em uma simulação, mas os pesquisadores também não conseguiram confirmar que os modelos realmente "acreditavam" nisso ou estavam apenas agindo como se o fizessem.
+
+Os incidentes da Anthropic, embora ainda preocupantes, foram menos coordenados e generalizados do que o incidente da OpenAI que deu início a uma crise de segurança cibernética em todo o setor neste verão. Dito isso, existem semelhanças significativas. A Anthropic disse que os problemas mais prevalentes que descobriu incluíam uma "vontade de tomar ações prejudiciais na busca estreita de uma tarefa", semelhante ao "hacking de recompensa" que precedeu o ataque Rosto de Abraço. Assim como a OpenAI, ela disse que seus testes e avaliações de pré-lançamento não conseguiram detectar riscos graves.
+
+A Anthropic disse que assinou um acordo com o METR, um dos avaliadores terceirizados de IA mais proeminentes do setor, começando com um contrato de pesquisa de oito semanas. O acordo concede ao METR acesso a transcrições "além da janela em que os incidentes ocorreram" (provavelmente uma escavação sutil no OpenAI, que foi criticado por limitar o acesso em um acordo com o METR após o ataque Hugging Face). também disse que o METR seria capaz de conversar diretamente com os funcionários da Anthropic, "que terão permissão para compartilhar informações confidenciais".
+
+O relatório da Anthropic veio na esteira da demissão de Jacob Coxon, que havia trabalhado em pré-treinamento de IA na Anthropic desde maio e antes disso passou anos trabalhando na OpenAI. Na terça-feira, ele renunciou e postou uma carta pública para X sobre seu raciocínio . "As pessoas que constroem a IA acreditam sinceramente que ela pode matar a todos nós até o final da década", escreveu ele, acrescentando que nem a OpenAI nem a Anthropic é "agir com responsabilidade" e, em vez disso, "correr direto para a superinteligência auto-aperfeiçoada e jogar com nossas vidas." Coxon acrescentou: "Não subestime o poder desta tecnologia. Em breve, serão sistemas sobre-humanos que podem hackear qualquer coisa, revolucionar qualquer campo da noite para o dia e adquirir poder e recursos reais. Todos nós testemunhamos o progresso em cada um desses domínios, e o progresso não é desacelerando."
+
+Coxon está longe de ser o primeiro pesquisador de IA a levantar esses tipos de alarmes, nem mesmo o primeiro pesquisador antrópico a fazê-lo — em fevereiro, Mrinank Sharma, da Anthropic, renunciou e escreveu no X, alertando que "o mundo está em perigo".
+
+Mas o post de Coxon ganhou peso adicional graças ao seu timing em torno das revelações da OpenAI e do hacking antrópico. Embora a indústria de IA tenha visto mais do que seu quinhão de hype, os recentes ataques cibernéticos por agentes de IA — habilitados pelos laboratórios que os criaram — são reais e preocupantes. Muitos outros pesquisadores nos principais laboratórios de IA ecoaram suas preocupações e fizeram apelos para que os funcionários da indústria de IA assinassem uma carta pública de julho, que pede uma desaceleração no desenvolvimento da IA.
+
+---
+
+**Fonte original:** [The Verge AI](https://www.theverge.com/ai-artificial-intelligence/994064/anthropic-spent-this-week-in-hot-water-over-cybersecurity)
