@@ -1,0 +1,30 @@
+---
+title: "Os fabricantes de agentes de IA estão prometendo privacidade — eles vão cumprir?"
+date: 2026-10-10
+categoria: "agents"
+fonte: "The Verge AI"
+fonteUrl: "https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots"
+resumo: "No OpenAI DevDay deste ano, o CEO Sam Altman revelou o novo agente de IA da empresa, Dots - e disse à multidão que a empresa quer \"estabelecer um novo padrão de privacidade na IA de fronteira.\" A OpenAI passaria o dia tirando fotos veladas na Muse da Meta, sua principal concorrente, por não manter os dados dos usuários"
+destaque: false
+imagem: "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25299205/STK453_Privacy_D_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100"
+---
+
+No OpenAI DevDay deste ano, o CEO Sam Altman revelou o novo agente de IA da empresa, Dots — e disse à multidão que a empresa quer “estabelecer um novo padrão de privacidade na IA de fronteira." A OpenAI passaria o dia tirando fotos veladas do Muse da Meta, seu principal concorrente, por não manter os dados dos usuários seguros. No entanto, a própria Muse, alguns meses antes, havia sido lançada como uma alternativa supostamente mais segura ao antecessor do OpenClaw — com o CEO Mark Zuckerberg prometendo que foi "construído desde o início para privacidade e segurança".
+
+Em uma época em que as empresas acumulam dados pessoais dos clientes e os ataques cibernéticos custam uma dúzia, os laboratórios de IA estão tentando convencer os usuários a compartilhar ainda mais informações com seus agentes. Sua mais recente estratégia de sucesso é superar a concorrência, prometendo que, ao contrário de seus rivais, manterão os dados dos usuários longe de olhares indiscretos. A questão é se as empresas podem cumprir essas promessas.
+
+Nat Friedman, chefe de produto da Meta Superintelligence Labs, escreveu no X que o “objetivo da empresa com a Muse era construir algo como uma garra aberta que pudéssemos tornar seguro e fácil de usar e dimensionar para bilhões de pessoas." Os dados do usuário são armazenados em uma VM segura, o que Zuckerberg descreveu como um "computador linux isolado com navegador, CPU, memória e armazenamento.” A empresa disse que a maioria dos o esforço na construção do Muse estava relacionado ao “projeto e engenharia cuidadosos para operá-lo com mais segurança." O post do Meta continuou: "O Muse pode e ainda cometerá erros, mas esperamos que eles sejam muito menos frequentes e causem muito menos danos devido aos sistemas de segurança que construímos."
+
+Mas, embora o Muse tenha liderado as paradas da App Store e, por Apptopia, ganhado 600.000 usuários ativos diários nos EUA em poucas semanas, as promessas da Meta parecem ter ficado aquém. Embora os dados estejam isolados de outros usuários, e a empresa planeje introduzir uma maneira "de impedir de forma criptográfica e verificável que a Meta acesse os dados em sua VM" ainda este ano, a própria Meta ainda pode acessar os dados. pesquisador rapidamente expôs uma vulnerabilidade de dia zero que poderia permitir que alguém assumisse o controle do Muse (que já foi corrigido), aumentando os temores de ataques externos. Vários problemas sérios de segurança surgiram no último minuto antes do lançamento , um dos quais poderia ter permitido que os usuários acessassem os próprios bancos de dados internos da Meta, por 404 Media .
+
+O Muse também parece coletar liberalmente (e, em alguns casos, distribuir) dados. O padrão é permitir que a Meta treine modelos sobre o que os usuários colocam nele, embora seja possível optar por não participar. Um repórter da Inc. reclamou que Muse carregou e leu suas mensagens privadas sem que ele pedisse, e um YouTuber disse que havia oferecido seu endereço a um estranho via Marketplace — em ambos os casos, Muse estava funcionando aparentemente como pretendido, mas o usuário não percebeu o quão longe iria. A plataforma cria "perfis detalhados de todos os seus amigos e familiares", conforme relatado pela Wired. Nada disso é necessariamente inesperado no Meta, mas certamente não respalda a ideia de que o Muse é exclusivamente preocupado com a privacidade ou a segurança.
+
+A OpenAI aproveitou esse fato ao anunciar o Dots no final de setembro. Alexander Embiricos, líder de produto do Codex da OpenAI, disse no palco do DevDay que a OpenAI está focada em ter o "assistente mais confiável, seguro e protegido", e o CEO Sam Altman demonstrou maneiras pelas quais as pessoas poderiam exercer controle sobre seus Pontos individuais, como definir uma regra de que nunca deve fazer uma compra sobre um determinado valor em dólares. "Acho que estamos em uma posição diferente da Meta, pois eles não têm um produto de IA que tenha 1,2 bilhão de usuários", disse Glen Coates, chefe da plataforma de aplicativos da OpenAI, acrescentando que "lançar algo que cometa esse tipo de erro é algo que tentaríamos evitar".
+
+O próprio Altman também empurrou o ângulo da privacidade no DevDay. Para atrair clientes empresariais, os executivos apresentaram uma estrutura que permite que as empresas tenham "controles mais fortes" sobre seus dados e zero opções de política de retenção de dados (o que significa que nenhum dado é armazenado em servidores OpenAI). De fato, até agora, não houve muitos escândalos de privacidade com o Dots — embora esteja disponível apenas no ChatGPT de $ 100 ou mais níveis de assinatura, também é provável que menos pessoas o usem.
+
+As pessoas ainda podem não se sentir confortáveis em fornecer seus dados pessoais à OpenAI, em parte simplesmente porque os agentes de IA exigem muito deles. Por exemplo, Allison Johnson, do The Verge, sentiu-se desconfortável ao digitar suas informações bancárias quando o bot perguntou como parte de uma tarefa relevante (o Muse tem uma integração com o Stripe para cuidar disso).
+
+---
+
+**Fonte original:** [The Verge AI](https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots)
