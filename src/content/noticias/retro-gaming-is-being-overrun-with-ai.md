@@ -1,0 +1,30 @@
+---
+title: "Jogos retrô estão sendo invadidos por IA"
+date: 2026-10-23
+categoria: "novas-ias"
+fonte: "The Verge AI"
+fonteUrl: "https://www.theverge.com/ai-artificial-intelligence/1015430/ai-retro-games-decomp-recomp-port"
+resumo: "Os videogames retrô estão por toda parte ultimamente - especialmente em lugares onde não deveriam estar. Halo em um navegador da web, Wind Waker no iPhone, Super Smash Bros. em realidade mista.  Ao longo do último mês, esses tipos de projetos inesperados se tornaram virais com uma frequência incrível, graças a novas"
+destaque: false
+imagem: "https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/STK465_VIDEO_GAMES_EMULATOR__CVirginia_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100"
+---
+
+Os videogames retrô estão por toda parte ultimamente — especialmente em lugares onde não deveriam estar. Halo em um navegador da web, Wind Waker no iPhone , Super Smash Bros. em realidade mista. Ao longo do último mês, esses tipos de projetos inesperados se tornaram virais com uma frequência incrível, graças a novas ferramentas de IA, à medida que os amadores desmontam os jogos e os reconstroem para novas plataformas. Mas enquanto a IA tem sobrecarregou o ritmo desses portos, também está destruindo comunidades unidas dedicadas à preservação de jogos.
+
+Decomps e recomps — abreviação de descompilar e recompilar — são uma forma de engenharia reversa que envolve dividir um jogo em seus blocos de construção e depois reconstruí-lo para que possa ser executado em hardware para o qual nunca foi destinado. Quando feito manualmente, é um processo lento e meticuloso. Um grupo passou anos descompilando o Animal Crossing original no GameCube , por exemplo. Mas as ferramentas de codificação de IA reduziram significativamente esse cronograma, e o grande número de portos cresceu dramaticamente nos últimos meses.
+
+Neste verão, Chris Sotraidis, um consultor de IA que trabalha em portas de jogos como hobby, viu uma porta de Command &amp; Conquer: Generals Zero Hour — que a EA tornou de código aberto no ano passado — para o iPhone e iPad . Os "desafios técnicos" o inspiraram a tentar fazer um punhado de portas semelhantes, incluindo uma porta móvel de The Legend of Zelda: Ocarina of Time usando uma decomposição existente da jogo . Em apenas algumas semanas, ele estava trabalhando em uma dúzia de projetos. Ele diz que esse tipo de produtividade não aconteceria sem o uso da IA.
+
+Algumas dessas portas "teriam sido possíveis com o mínimo de assistência de IA se eu tivesse tido significativamente mais tempo", diz Sotraidis. “Mas sou honesto o suficiente para dizer que o ritmo e o volume não teriam sido possíveis para mim sem ele. Em comparação, teria sido extremamente lento. As ferramentas permitem que você se mova muito mais rápido se souber o que quer.”
+
+Essa velocidade atraiu muitas pessoas para experimentar essas ferramentas de IA, seja por diversão, desafio técnico ou por razões de preservação. É também uma razão pela qual houve o que parece ser um dilúvio de novos projetos surgindo em plataformas como Reddit, X e GitHub. Mas esses portos podem ser problemáticos de uma perspectiva preservacionista. Uma das razões pelas quais os projetos de decomposição existem em primeiro lugar é que os usuários podem separar um jogo e entender como ele funciona, mas esse tipo de compreensão e conhecimento é perdido quando a IA faz o trabalho. Claro, você pode colocar o Homem-Aranha em um jogo do Batman, mas provavelmente não descobrirá como certas decisões de programação surgiram, o que pode prejudicar a capacidade de restaurar os jogos fielmente.
+
+O ritmo acelerado das decomposições impulsionadas por IA sobrecarregou a cena DIY. Na semana passada, um site focado na comunidade que rastreia projetos de decomposição e fornece vários recursos foi encerrado abruptamente devido ao impacto da IA. "Agora está claro que, com a orientação certa, a contribuição humana e as revisões de código, a IA pode acelerar o processo de descompilação de maneira significativa", escreveu o proprietário do site, sob o pseudônimo Encontro, disse ao anunciar o desligamento . “O que também está claro agora é que o aspecto comunitário da descompilação foi quebrado. Nossos projetos sempre foram de código aberto para incentivar contribuições e beneficiar a comunidade como um todo. Os maus atores têm abusado disso de maneiras cada vez mais problemáticas.”
+
+Essas maneiras incluem pegar projetos de descompilação existentes e “finalizá-los” com IA, bem como correr para portar rapidamente decomposições para as quais o usuário nunca realmente contribuiu em primeiro lugar. Em essência, um dos grandes problemas são as pessoas que estão usando a IA para acelerar o processo enquanto se baseiam no trabalho de outras pessoas. Este é especialmente um problema, dada a natureza centrada na comunidade do cena de decomposição existente. “A conclusão é que esses tipos de garfos hostis colocam pouco ou nenhum esforço em contribuir significativamente para projetos existentes, destruindo nosso tecido comunitário”, escreveu Encounter.
+
+Dados os desafios contínuos com a preservação de videogames, em que se estima que mais de 90% dos jogos clássicos estejam "criticamente ameaçados", a ascensão da IA na cena de decomposição pode ser vista como uma espécie de faca de dois gumes. Por um lado, criou uma onda de interesse, transformando palavras como decomp e recomp da terminologia de nicho em material de manchete, ao mesmo tempo em que permite não programadores a oportunidade de experimentar e testar ideias. Por outro lado, a velocidade e a falta de atenção aos detalhes em muitos desses projetos vão contra os objetivos da maioria dos preservacionistas, que tentam não apenas manter os jogos vivos para o público moderno, mas também entender a maneira como eles foram construídos. A IA é uma solução rápida que pode ter desvantagens a longo prazo.
+
+---
+
+**Fonte original:** [The Verge AI](https://www.theverge.com/ai-artificial-intelligence/1015430/ai-retro-games-decomp-recomp-port)
